@@ -19,8 +19,9 @@ function initializeSession() {
     var publisher = OT.initPublisher('publisher', {
             insertMode: 'append',
             width: '50%',
-            height: '50%'
-        }, handleError);
+            height: '50%',
+            publishVideo:false
+        }, handleError)
 
     // Connect to the session                                                                                            
     session.connect(token, function(error) {
@@ -28,7 +29,22 @@ function initializeSession() {
             if (error) {
                 handleError(error);
             } else {
-                session.publish(publisher, handleError);
+                session.publish(publisher, handleError)
+                .on('streamCreated', function (event) {
+                    console.log('The publisher started streaming.');
+                    setTimeout(function(){ 
+                        publisher.publishVideo(true); 
+                    }, 3000);
+                    
+                });
             }
         });
 }
+
+// publisher.on('streamCreated', function (event) {
+//     console.log('The publisher started streaming.');
+//     setTimeout(function(){ 
+//         publisher.publishVideo(true); 
+//     }, 3000);
+    
+// });
