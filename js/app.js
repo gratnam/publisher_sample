@@ -5,17 +5,31 @@ initializeSession();
 
 // Handling all of our errors here by alerting them                                                                      
 
-function handleError(error) {
-    if (error) {
-        //      alert(error.message);                                                                                    
-    }
-}
+// function handleError(error) {
+//         session.disconnect();
+//         //
+//         initializeSession();
+//     if (error) {
+
+//         //disconnect from session
+//         session.disconnect();
+//         //
+//         initializeSession();
+//     }
+// }
 
 function initializeSession() {
+
+    function handleError(error) {
+        if (error) {
+            console.log(error);
+            session.disconnect();
+            initializeSession();
+        }
+    }
+
     OT.setLogLevel(5);
     var session = OT.initSession(apiKey, sessionId);
-
-
 
     // Connect to the session                                                                                            
     session.connect(token, function(error) {
@@ -42,10 +56,12 @@ function initializeSession() {
                             setTimeout(function(){ 
                                 console.log('4. published audio')                                                                                                
                                 publisher.publishAudio(true); 
+                                publisher.publishVideo(true); 
+
                             }, 3000); 
                             setTimeout(function(){ 
                                 console.log('5. published video')                                                                                                
-                                publisher.publishVideo(true); 
+
                             }, 6000);    
                         });
 
@@ -53,8 +69,6 @@ function initializeSession() {
                     }, 3000);
               
                 }, 3000);
-
-                
 
                 
             }
