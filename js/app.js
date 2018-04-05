@@ -23,9 +23,10 @@ function initializeSession() {
             if (error) {
                 handleError(error);
             } else {
-                console.log('connected to session')
+                console.log('1. connected to session')
                 setTimeout(function(){ 
-                    // Create a publisher                                                                                                
+                    // Create a publisher
+                    console.log('2. initialized a pub with no A/V')                                                                                                
                     var publisher = OT.initPublisher('publisher', {
                             insertMode: 'append',
                             width: '50%',
@@ -34,15 +35,22 @@ function initializeSession() {
                             publishAudio:false
                         }, handleError)
                     
-                    session.publish(publisher, handleError)
-                    .on('streamCreated', function (event) {
-                        console.log('The publisher started streaming.');
-                        setTimeout(function(){ 
-                            publisher.publishVideo(true); 
-                            publisher.publishAudio(true); 
-                        }, 3000);
-                        
-                    });
+                    setTimeout(function(){ 
+                        session.publish(publisher, handleError)
+                        .on('streamCreated', function (event) {
+                            console.log('3. published with no A/V')                                                                                                
+                        //     setTimeout(function(){ 
+                        //         console.log('4. published audio')                                                                                                
+                        //         publisher.publishAudio(true); 
+                        //     }, 3000); 
+                        //     setTimeout(function(){ 
+                        //         console.log('5. published video')                                                                                                
+                        //         publisher.publishVideo(true); 
+                        //     }, 3000);    
+                        });
+
+
+                    }, 3000);
               
                 }, 3000);
 
@@ -52,11 +60,3 @@ function initializeSession() {
             }
         });
 }
-
-// publisher.on('streamCreated', function (event) {
-//     console.log('The publisher started streaming.');
-//     setTimeout(function(){ 
-//         publisher.publishVideo(true); 
-//     }, 3000);
-    
-// });
