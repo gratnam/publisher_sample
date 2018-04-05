@@ -24,27 +24,27 @@ function initializeSession() {
                 handleError(error);
             } else {
                 console.log('connected to session')
-                // setTimeout(function(){ 
-                //     // Create a publisher                                                                                                
-                //     var publisher = OT.initPublisher('publisher', {
-                //             insertMode: 'append',
-                //             width: '50%',
-                //             height: '50%',
-                //             publishVideo:false,
-                //             publishAudio:false
-                //         }, handleError)
+                setTimeout(function(){ 
+                    // Create a publisher                                                                                                
+                    var publisher = OT.initPublisher('publisher', {
+                            insertMode: 'append',
+                            width: '50%',
+                            height: '50%',
+                            publishVideo:false,
+                            publishAudio:false
+                        }, handleError)
                     
-                //     session.publish(publisher, handleError)
-                //     .on('streamCreated', function (event) {
-                //         console.log('The publisher started streaming.');
-                //         setTimeout(function(){ 
-                //             publisher.publishVideo(true); 
-                //             publisher.publishAudio(true); 
-                //         }, 3000);
+                    // session.publish(publisher, handleError)
+                    // .on('streamCreated', function (event) {
+                    //     console.log('The publisher started streaming.');
+                    //     setTimeout(function(){ 
+                    //         publisher.publishVideo(true); 
+                    //         publisher.publishAudio(true); 
+                    //     }, 3000);
                         
-                //     });
+                    // });
               
-                // }, 3000);
+                }, 3000);
 
                 
 
