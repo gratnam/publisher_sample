@@ -39,14 +39,14 @@ function initializeSession() {
                         session.publish(publisher, handleError)
                         .on('streamCreated', function (event) {
                             console.log('3. published with no A/V')                                                                                                
-                        //     setTimeout(function(){ 
-                        //         console.log('4. published audio')                                                                                                
-                        //         publisher.publishAudio(true); 
-                        //     }, 3000); 
-                        //     setTimeout(function(){ 
-                        //         console.log('5. published video')                                                                                                
-                        //         publisher.publishVideo(true); 
-                        //     }, 3000);    
+                            setTimeout(function(){ 
+                                console.log('4. published audio')                                                                                                
+                                publisher.publishAudio(true); 
+                            }, 3000); 
+                            setTimeout(function(){ 
+                                console.log('5. published video')                                                                                                
+                                publisher.publishVideo(true); 
+                            }, 6000);    
                         });
 
 
