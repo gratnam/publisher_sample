@@ -1,7 +1,6 @@
-var apiKey = "43024972";
-var sessionId = "1_MX40MzAyNDk3Mn5-MTUyMjg4MTQxODg3Nn44RmkyR0d0QzFaamJ4eElJMlpCYmRjM3F-UH4";
-var token = "T1==cGFydG5lcl9pZD00MzAyNDk3MiZzaWc9YmJhYjMxYjU1NTE1OTJhZDdlMTA3ZmVlYjExMjI0NDI5OWJkMmM1NDpzZXNzaW9uX2lkPTFfTVg0ME16QXlORGszTW41LU1UVXlNamc0TVRReE9EZzNObjQ0Um1reVIwZDBRekZhYW1KNGVFbEpNbHBDWW1Sak0zRi1VSDQmY3JlYXRlX3RpbWU9MTUyMjg4MTQ2NCZub25jZT0wLjMyODc5MjMwNTg0OTI5MzQmcm9sZT1wdWJsaXNoZXImZXhwaXJlX3RpbWU9MTUyMzQ4NjI2NCZpbml0aWFsX2xheW91dF9jbGFzc19saXN0PQ==";
-
+var apiKey = "45778292";
+var sessionId = "2_MX40NTc3ODI5Mn5-MTUyMjk2MDI2MzIzOX5kRjdtVmoyZGZsZ2Jab2tqb0NFQXFNckx-fg";
+var token = "T1==cGFydG5lcl9pZD00NTc3ODI5MiZzaWc9YzE2NzU4ZmE2YmI1M2VkMDYwZjU5MGNmZDZkNzgxYWZkZGM2OWQ4YTpzZXNzaW9uX2lkPTJfTVg0ME5UYzNPREk1TW41LU1UVXlNamsyTURJMk16SXpPWDVrUmpkdFZtb3laR1pzWjJKYWIydHFiME5GUVhGTmNreC1mZyZjcmVhdGVfdGltZT0xNTIyOTYwMjg2Jm5vbmNlPTAuNjIwMTc2NDc0MTA0Mzk2MiZyb2xlPXB1Ymxpc2hlciZleHBpcmVfdGltZT0xNTI1NTUyMjg2JmluaXRpYWxfbGF5b3V0X2NsYXNzX2xpc3Q9";
 initializeSession();
 
 // Handling all of our errors here by alerting them                                                                      
