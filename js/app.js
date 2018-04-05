@@ -34,15 +34,15 @@ function initializeSession() {
                             publishAudio:false
                         }, handleError)
                     
-                    // session.publish(publisher, handleError)
-                    // .on('streamCreated', function (event) {
-                    //     console.log('The publisher started streaming.');
-                    //     setTimeout(function(){ 
-                    //         publisher.publishVideo(true); 
-                    //         publisher.publishAudio(true); 
-                    //     }, 3000);
+                    session.publish(publisher, handleError)
+                    .on('streamCreated', function (event) {
+                        console.log('The publisher started streaming.');
+                        setTimeout(function(){ 
+                            publisher.publishVideo(true); 
+                            publisher.publishAudio(true); 
+                        }, 3000);
                         
-                    // });
+                    });
               
                 }, 3000);
 
